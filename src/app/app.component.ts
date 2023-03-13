@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
-  numbers = [1, 2, 3, 4, 5];
+  // numbers = [1, 2, 3, 4, 5];
+  oddNumbers = [1,3,5];
+  eventNumber = [2,4]
   onlyOdd = false;
 }

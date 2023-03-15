@@ -15,7 +15,27 @@
             {{odd}}
           </li>
         </div>
-        <div *ngIf="!onlyOdd">
+        <!-- <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{even : even % 2 === 0}"
+            [ngStyle]="{backgroundColor: even % 2 === 0 ? 'lightyellow' : 'lightblue'}"
+            *ngFor="let even of eventNumber">
+            {{even}}
+          </li>
+        </div>
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li
+              class="list-group-item"
+              [ngClass]="{even : even % 2 === 0}"
+              [ngStyle]="{backgroundColor: even % 2 === 0 ? 'lightyellow' : 'lightblue'}"
+              *ngFor="let even of eventNumber">
+              {{even}}
+            </li>
+          </div>
+        </ng-template> -->
+        <div *appNgNotIf="onlyOdd">
           <li
             class="list-group-item"
             [ngClass]="{even : even % 2 === 0}"
@@ -25,6 +45,19 @@
           </li>
         </div>
         <p appBasicHighlight>This is basic-highlight directive target</p>
+        <hr>
+        <!-- <p appBetterHighlight [defaultColor]="'yellow'" 
+        [highlightColor]="'magenta'" 
+        [leaveColor]="'purple'">This is better-highlight directive target</p> -->
+        <hr>
+        <p [appBetterHighlight]="'yellow'" 
+        [highlightColor]="'magenta'" 
+        [leaveColor]="'purple'">This is better-highlight directive target</p>
+        <div [ngSwitch]="someValue">
+          <p *ngSwitchCase="5"> Some value = 5</p>
+          <p *ngSwitchCase="10"> Some value = 10</p>
+          <p *ngSwitchDefault> Some value = default</p>
+        </div>
       </ul>
     </div>
   </div>

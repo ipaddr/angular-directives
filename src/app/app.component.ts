@@ -11,4 +11,6 @@ export class AppComponent {
   oddNumbers = [1,3,5];
   eventNumber = [2,4]
   onlyOdd = false;
+
+  someValue = 10;
 }

@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BasicHighlightDirective } from './besic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './better-highlight.directive';
+import { NgNotIfDirective } from './ng-not-if.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    NgNotIfDirective
   ],
   imports: [
     BrowserModule,
